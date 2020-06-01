@@ -61,7 +61,7 @@ class GazeboConnection():
             rospy.logwarn("SIMULATION RESET")
             self.resetSimulation()
         elif self.reset_world_or_sim == "WORLD":
-            rospy.logwarn("WORLD RESET")
+            # rospy.logwarn("WORLD RESET")
             self.resetWorld()
         elif self.reset_world_or_sim == "NO_RESET_SIM":
             rospy.logerr("NO RESET SIMULATION SELECTED")
@@ -89,8 +89,8 @@ class GazeboConnection():
         if self.start_init_physics_parameters:
             rospy.logdebug("Initialising Simulation Physics Parameters")
             self.init_physics_parameters()
-        else:
-            rospy.logwarn("NOT Initialising Simulation Physics Parameters")
+        # else:
+        #     rospy.logwarn("NOT Initialising Simulation Physics Parameters")
         
     def init_physics_parameters(self):
         """
